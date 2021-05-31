@@ -1,0 +1,10 @@
+{
+    "name": "local-file-source",
+    "config" :
+    {
+        "connector.class": "org.apache.kafka.connect.file.FileStreamSourceConnector",
+        "file": "/tmp/test.txt",
+        "task.max": "1",
+        "topic": "connect-test"
+    }
+}

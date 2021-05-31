@@ -1,0 +1,16 @@
+com/example/SimpleProducer.java
+ com.example.SimpleProducer
+com/example/KafkaProducerKeyValue.java
+ com.example.KafkaProducerKeyValue
+com/example/KafkaProducerExactPartition.java
+ com.example.KafkaProducerExactPartition
+com/example/CustomPartitioner.java
+ com.example.CustomPartitioner
+com/example/ProducerWithCustomPartitioner.java
+ com.example.ProducerWithCustomPartitioner
+com/example/ProducerWithSyncCallback.java
+ com.example.ProducerWithSyncCallback
+com/example/ProducerWithAsyncCallback.java
+ com.example.ProducerWithAsyncCallback
+com/example/ProducerCallback.java
+ com.example.ProducerCallback

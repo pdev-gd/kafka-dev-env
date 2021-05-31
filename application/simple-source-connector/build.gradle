@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+group 'com.example'
+version '1.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //compile 'org.apache.kafka:connect-api:2.7.0'
+    implementation group: 'org.apache.kafka', name: 'connect-api', version: '2.7.0'
+
+    compile 'org.slf4j:slf4j-simple:1.7.30'
+}
+
+// 사용자가 직접 작성한 클래스와 참조하는 라이브러리도 함께 빌드하여 jar로 압축해야 한다.
+// 개발시에 참조했던 디펜던시를 같이 빌드하지 않고 커넥트의 플러그인으로 추가하면
+// 커넥터 실행 시 참조하는 클래스를 찾지 못하고 ClassNotFoundException 이 발생한다.
+jar {
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}

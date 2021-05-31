@@ -1,0 +1,10 @@
+{
+    "name": "simple-file-source-connector",
+    "config" :
+    {
+        "connector.class": "com.example.SingleFileSourceConnector",
+        "file": "/tmp/log1.txt",
+        "task.max": "1",
+        "topic": "test-target"
+    }
+}
